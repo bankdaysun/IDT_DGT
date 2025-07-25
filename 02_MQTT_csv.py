@@ -3,11 +3,11 @@ import time
 from datetime import datetime
 import paho.mqtt.client as mqtt
 
-filename = "01_ldr_data.csv"
+filename = "______________.csv"
 fieldnames = ["timestamp", "value"]
 
 counter = 0
-max_count = 20
+max_count = _____
 
 
 with open(filename, "w", newline='', encoding="utf-8") as f:
@@ -32,9 +32,9 @@ def on_message(client, userdata, msg):
         print("Error:", e)
 
 
-broker = "broker.emqx.io"  # หรือ IP เช่น "192.168.0.10"
+broker = "____________"
 port = 1883
-topic = "idt/ldr"
+topic = "_________________"
 client = mqtt.Client()
 client.on_message = on_message
 client.connect(broker, port)
